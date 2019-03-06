@@ -3,7 +3,21 @@ const path = require('path');
 
 const { readCSV } = require('./csv');
 
-const EVENTS = readCSV(path.resolve('events.csv'));
+const CSV_OPTIONS = {
+  colParser: {
+    lat: {
+      flat: true,
+      cellParser: "number"
+    },
+    lon: {
+      flat: true,
+      cellParser: "number"
+    }
+  }
+}; 
+
+
+const EVENTS = readCSV(path.resolve('events.csv'), CSV_OPTIONS);
 
 function closestLocation(targetLocation, locationData) {
   function vectorDistance(dx, dy) {
