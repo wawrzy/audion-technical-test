@@ -1,0 +1,6 @@
+changelog
+node_modules
+.vscode
+.idea
+logs
+doc-tmp
