@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "apidoc": "^0.17.6",
-    "apidoc-markdown2": "^0.3.7"
+    "apidoc-markdown2": "^0.3.7",
+    "nodemon": "^1.18.4"
   }
 }
