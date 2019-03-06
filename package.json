@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "10.x"
+  },
   "scripts": {
     "apidoc": "./node_modules/.bin/apidoc -i src/ -o doc-tmp/ && ./node_modules/.bin/apidoc-markdown2 -p doc-tmp/ -o ./docs/api.md && rm -rf ./doc-tmp/",
     "start": "mkdir -p logs && node ./src/app.js",
@@ -7,24 +10,18 @@
   },
   "dependencies": {
     "app-root-path": "^2.1.0",
-    "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.18.3",
     "boom": "^7.2.0",
     "cors": "^2.8.4",
     "csvtojson": "^2.0.8",
     "express": "^4.16.3",
-    "jwt-simple": "^0.5.3",
     "lodash": "^4.17.11",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.4",
-    "nyc": "^13.0.1",
     "winston": "^3.1.0"
   },
   "devDependencies": {
     "apidoc": "^0.17.6",
-    "apidoc-markdown2": "^0.3.7",
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "codecov": "^3.1.0"
+    "apidoc-markdown2": "^0.3.7"
   }
 }
